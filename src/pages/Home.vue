@@ -92,8 +92,6 @@
   <!-- Footer -->
   <FooterSection />
 
-  <SkillReactionIcons />
-
 </template>
 
 <script setup lang="ts">
@@ -104,5 +102,4 @@ import Projects from '@/components/Projects.vue';
 import Services from '@/components/Services.vue';
 import Contact from '@/components/Contact.vue';
 import FooterSection from '@/components/FooterSection.vue';
-import SkillReactionIcons from '@/components/SkillReactionIcons.vue';
 </script>

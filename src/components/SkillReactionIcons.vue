@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-full max-w-4xl aspect-square rounded-3xl border border-slate-800 bg-slate-900/30 shadow-xl overflow-hidden select-none"
+    class="relative w-full aspect-square rounded-3xl border border-slate-800 bg-slate-900/30 shadow-xl overflow-hidden select-none"
   >
     <canvas
       ref="canvasRef"
@@ -31,15 +31,15 @@ const props = defineProps({
   skills: {
     type: Array,
     default: () => [
-      { key: "laravel", src: "/icons/laravel.svg" },
-      { key: "vue", src: "/icons/vue.svg" },
-      { key: "mysql", src: "/icons/mysql.svg" },
-      { key: "docker", src: "/icons/docker.svg" },
-      { key: "git", src: "/icons/git.svg" },
-      { key: "dotnet", src: "/icons/dotnet.svg" },
-      { key: "redis", src: "/icons/redis.svg" },
-      { key: "linux", src: "/icons/linux.svg" },
-      { key: "tailwind", src: "/icons/tailwind.svg" },
+      { key: "laravel", src: "assets/icons/laravel.svg" },
+      { key: "vue", src: "assets/icons/vuejs.svg" },
+      { key: "mysql", src: "assets/icons/mysql.svg" },
+      { key: "docker", src: "assets/icons/docker.svg" },
+      { key: "git", src: "assets/icons/git.svg" },
+      { key: "dotnet", src: "assets/icons/dotnet.svg" },
+      { key: "redis", src: "assets/icons/redis.svg" },
+      { key: "linux", src: "assets/icons/linux.svg" },
+      { key: "tailwind", src: "assets/icons/tailwind.svg" },
     ],
   },
 

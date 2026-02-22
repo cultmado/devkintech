@@ -9,13 +9,13 @@
           <h2 class="text-4xl font-bold mb-2">Technical Mastery</h2>
           <p class="text-slate-400">My specialized toolset for building digital products.</p>
         </div>
-        <div class="flex gap-2">
+        <!-- <div class="flex gap-2">
           <span class="px-3 py-1 rounded-full bg-slate-800 text-xs font-semibold">Frontend</span>
           <span class="px-3 py-1 rounded-full bg-slate-800 text-xs font-semibold">Backend</span>
           <span class="px-3 py-1 rounded-full bg-slate-800 text-xs font-semibold">DevOps</span>
-        </div>
+        </div> -->
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+      <!-- <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
         <div
           class="skill-card glass p-6 rounded-2xl flex flex-col items-center gap-4 transition-all duration-300"
         >
@@ -76,7 +76,12 @@
           </div>
           <span class="font-bold text-sm">Docker</span>
         </div>
-      </div>
+      </div> -->
+      <SkillReactionIcons />
     </div>
   </section>
 </template>
+
+<script setup>
+import SkillReactionIcons from '@/components/SkillReactionIcons.vue';
+</script>
