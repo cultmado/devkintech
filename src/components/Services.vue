@@ -18,21 +18,23 @@
           </div>
           <h3 class="text-2xl font-bold mb-4">API Development</h3>
           <p class="text-slate-400 leading-relaxed mb-6">
-            Robust, secure, and scalable RESTful &amp; GraphQL APIs tailored for your front-end
-            needs.
+            I design and build secure, scalable, and high-performance RESTful APIs to power web and mobile applications. My APIs follow best practices in architecture, authentication, and documentation to ensure reliability and easy integration.
           </p>
           <ul class="space-y-3 text-sm text-slate-300">
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-              Microservices Architecture
+              Microservices-ready architecture
             </li>
             <li class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary text-lg">check_circle</span> Auth
-              &amp; Security Protocols
+              <span class="material-symbols-outlined text-primary text-lg">check_circle</span> Secure authentication (JWT, OAuth, Sanctum, etc.)
             </li>
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-              Documentation (Swagger)
+              Well-documented APIs
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+              Database optimization & performance tuning
             </li>
           </ul>
         </div>
@@ -44,22 +46,22 @@
           >
             <span class="material-symbols-outlined text-3xl">stay_primary_portrait</span>
           </div>
-          <h3 class="text-2xl font-bold mb-4">Mobile App Design</h3>
+          <h3 class="text-2xl font-bold mb-4">Mobile App Development</h3>
           <p class="text-blue-100 leading-relaxed mb-6">
-            Pixel-perfect cross-platform mobile apps using Flutter that run natively on iOS &amp;
-            Android.
+            I develop fast, modern cross-platform mobile applications, delivering smooth performance and native-like user experiences on Android and iOS.
           </p>
           <ul class="space-y-3 text-sm text-blue-50">
             <li class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-lg">check_circle</span> Native-feel
-              performance
+              <span class="material-symbols-outlined text-lg">check_circle</span> Cross-platform Android & iOS apps
             </li>
             <li class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-lg">check_circle</span> Push Notifications
+              <span class="material-symbols-outlined text-lg">check_circle</span> Clean UI/UX with responsive design
             </li>
             <li class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-lg">check_circle</span> App Store
-              Submission
+              <span class="material-symbols-outlined text-lg">check_circle</span> Push notifications & third-party API integration
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-lg">check_circle</span> App Store & Play Store deployment support
             </li>
           </ul>
         </div>
@@ -71,22 +73,20 @@
           >
             <span class="material-symbols-outlined text-3xl">laptop_mac</span>
           </div>
-          <h3 class="text-2xl font-bold mb-4">Full-stack Web</h3>
+          <h3 class="text-2xl font-bold mb-4">Full-Stack Web Development</h3>
           <p class="text-slate-400 leading-relaxed mb-6">
-            Complete web ecosystems from interactive dashboards to complex e-commerce platforms.
+            I build complete web applications from backend to frontend, focusing on performance, security, and user experience. From dashboards to e-commerce platforms, I deliver scalable solutions tailored to business needs.
           </p>
           <ul class="space-y-3 text-sm text-slate-300">
             <li class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-              Responsive &amp; Accessible
+              <span class="material-symbols-outlined text-primary text-lg">check_circle</span>Modern frontend design
             </li>
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
               Database Optimization
             </li>
             <li class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary text-lg">check_circle</span> SEO
-              Best Practices
+              <span class="material-symbols-outlined text-primary text-lg">check_circle</span> SEO-friendly and responsive UI
             </li>
           </ul>
         </div>

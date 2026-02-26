@@ -83,5 +83,5 @@
 </template>
 
 <script setup>
-import SkillReactionIcons from '@/components/SkillReactionIcons.vue';
+import SkillReactionIcons from '@/components/SkillReactionIcons.vue'
 </script>

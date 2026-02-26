@@ -1,6 +1,6 @@
 <style scoped>
 #profile-img {
-  background-image: url('@/assets/images/mac.png')
+  background-image: url('@/assets/images/mee2.png');
 }
 </style>
 <template>
@@ -34,7 +34,7 @@
           <!-- , <span class="block mt-2 text-4xl md:text-6xl text-slate-200">Software Engineer</span> -->
         </h1>
         <p class="text-xl md:text-2xl text-slate-400 max-w-xl leading-relaxed">
-          <span class="text-slate-100 font-bold">Full-Stack Developer</span> delivering scalable web and mobile applications with expertise in cloud infrastructure and deployment for high-performing, reliable systems.
+          <span class="text-slate-100 font-bold">Full-Stack Developer</span> building scalable systems by day and lifting heavy code (and weights) by night — engineered for performance, reliability, and gains.
           <!-- Full-stack and mobile development expert building
           <span class="text-slate-100">premium digital experiences</span> with modern technology
           stacks. -->
@@ -48,13 +48,13 @@
           <button
             class="bg-primary hover:shadow-[0_0_20px_rgba(13,89,242,0.4)] text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 transition-all"
           >
-            View Projects <span class="material-symbols-outlined">arrow_forward</span>
+            Download CV <span class="material-symbols-outlined">download</span>
           </button>
-          <button
+          <!-- <button
             class="bg-charcoal hover:bg-slate-700 border border-slate-700 text-white px-8 py-4 rounded-xl font-bold transition-all"
           >
             Download CV
-          </button>
+          </button> -->
         </div>
       </div>
       <div class="relative hidden lg:block">
@@ -91,15 +91,14 @@
 
   <!-- Footer -->
   <FooterSection />
-
 </template>
 
 <script setup lang="ts">
-import Navbar from '@/components/Navbar.vue';
-import WorkHistory from '@/components/WorkHistory.vue';
-import Skills from '@/components/Skills.vue';
-import Projects from '@/components/Projects.vue';
-import Services from '@/components/Services.vue';
-import Contact from '@/components/Contact.vue';
-import FooterSection from '@/components/FooterSection.vue';
+import Navbar from '@/components/Navbar.vue'
+import WorkHistory from '@/components/WorkHistory.vue'
+import Skills from '@/components/Skills.vue'
+import Projects from '@/components/Projects.vue'
+import Services from '@/components/Services.vue'
+import Contact from '@/components/Contact.vue'
+import FooterSection from '@/components/FooterSection.vue'
 </script>

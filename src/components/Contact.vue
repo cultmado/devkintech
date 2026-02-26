@@ -24,7 +24,7 @@
                 <p class="text-lg font-bold">kinnberedico.work@gmail.com</p>
               </div>
             </div>
-            <div class="flex items-center gap-4 group">
+            <div class="flex items-center gap-4 group hidden">
               <div
                 class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all"
               >

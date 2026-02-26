@@ -4,12 +4,14 @@
       class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8"
     >
       <div class="flex items-center gap-2">
-        <span class="text-xl font-bold tracking-tight"
-          >@devkintech<span class="text-primary">.</span></span
-        >
+        <a href="#home">
+          <span class="text-xl font-bold tracking-tight"
+            >@devkintech<span class="text-primary">.</span></span
+          >
+        </a>
       </div>
-      <p class="text-slate-500 text-sm">© 2026 Devkin Technologies. All Rights Reserved.</p>
-      <div class="flex gap-6">
+      <p class="text-slate-500 text-sm">© 2026 Kinn Beredico</p>
+      <div class="flex gap-6 hidden">
         <a class="text-slate-400 hover:text-white transition-colors text-sm" href="#"
           >Privacy Policy</a
         >
