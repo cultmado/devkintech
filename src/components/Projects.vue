@@ -56,11 +56,27 @@ import { ref } from 'vue'
 
 const projects = ref([
   {
+    image: 'assets/images/projects/jmampuag-barber.png',
+    name: 'JMampuag Barber',
+    description: 'Precision barbering, thoughtful service, and a space designed for your best look.',
+    stacks: ['Laravel', 'mysql', 'linux', 'Nuxt', 'nginx'],
+    link: 'https://jmampuagbarber.com',
+    mobile_app_link: null
+  },
+  {
     image: 'assets/images/projects/Capex.png',
     name: 'CaPEx',
     description: 'TNVS - Web & Mobile App',
     stacks: ['Laravel', 'mysql', 'Flutter', 'linux'],
     link: 'https://capex.com.ph',
+    mobile_app_link: null
+  },
+  {
+    image: 'assets/images/projects/recruit-system.png',
+    name: 'PA Officer Admission Board Web Application',
+    description: '',
+    stacks: ['Laravel', 'livewire', 'mysql', 'linux'],
+    link: 'https://recruit-system.og1pa.net/',
     mobile_app_link: null
   },
   {
@@ -78,14 +94,6 @@ const projects = ref([
     stacks: ['Laravel', 'mysql', 'Ionic', 'ionic Appflow', 'linux'],
     link: 'https://playnow.ae',
     mobile_app_link: 'https://apps.apple.com/ph/app/playnow-active-lifestyle-app/id6753778471'
-  },
-  {
-    image: 'assets/images/projects/recruit-system.png',
-    name: 'PA Officer Admission Board Web Application',
-    description: '',
-    stacks: ['Laravel', 'livewire', 'mysql', 'linux'],
-    link: 'https://recruit-system.og1pa.net/',
-    mobile_app_link: null
   },
   {
     image: 'assets/images/projects/etbmac.png',

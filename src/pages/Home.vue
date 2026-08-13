@@ -1,8 +1,3 @@
-<style scoped>
-#profile-img {
-  background-image: url('@/assets/images/mee2.png');
-}
-</style>
 <template>
   <!-- Navigation Bar -->
   <Navbar />
@@ -59,16 +54,32 @@
       </div>
       <div class="relative hidden lg:block">
         <div
-          class="relative w-full aspect-square rounded-3xl overflow-hidden glass p-4 rotate-3 hover:rotate-0 transition-transform duration-500"
+          class="relative glass rounded-3xl p-6 -rotate-2 hover:rotate-0 transition-transform duration-500 shadow-2xl"
         >
-          <div
-            id="profile-img"
-            class="w-full h-full bg-slate-800 rounded-2xl bg-cover bg-center shadow-2xl border border-slate-700"
-          ></div>
+          <div class="flex items-center gap-2 mb-5">
+            <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+            <span class="ml-3 text-xs text-slate-500 font-mono">developer.ts</span>
+          </div>
+          <pre
+            class="font-mono text-sm md:text-base leading-relaxed overflow-x-auto"
+          ><code><span class="text-purple-400">const</span> <span class="text-blue-300">developer</span> = {
+  <span class="text-sky-300">name</span>: <span class="text-emerald-400">'Kinn Beredico'</span>,
+  <span class="text-sky-300">role</span>: <span class="text-emerald-400">'Full-Stack Developer'</span>,
+  <span class="text-sky-300">focus</span>: <span class="text-emerald-400">'Performance & Reliability'</span>,
+  <span class="text-sky-300">available</span>: <span class="text-orange-400">true</span>,
+}</code></pre>
         </div>
-        <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary/20 blur-3xl rounded-full"></div>
         <div
-          class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-600/10 blur-3xl rounded-full"
+          class="absolute -top-6 -right-6 glass rounded-2xl px-5 py-4 shadow-xl"
+        >
+          <p class="text-2xl font-black text-primary">{{ yearsExperience }}+</p>
+          <p class="text-xs text-slate-400 font-semibold whitespace-nowrap">Years Experience</p>
+        </div>
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/20 blur-3xl rounded-full -z-10"></div>
+        <div
+          class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-600/10 blur-3xl rounded-full -z-10"
         ></div>
       </div>
     </div>
@@ -101,4 +112,6 @@ import Projects from '@/components/Projects.vue'
 import Services from '@/components/Services.vue'
 import Contact from '@/components/Contact.vue'
 import FooterSection from '@/components/FooterSection.vue'
+
+const yearsExperience = new Date().getFullYear() - 2019
 </script>
