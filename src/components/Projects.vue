@@ -56,6 +56,22 @@ import { ref } from 'vue'
 
 const projects = ref([
   {
+    image: 'assets/images/projects/4k-event-rentals.png',
+    name: '4K Event Rentals',
+    description: 'Table and Chairs Rentals in Bato Camarines Sur, Philippines. Providing quality and affordable event rentals for any special occasions.',
+    stacks: ['Laravel', 'mysql', 'linux', 'alpinejs', 'nginx'],
+    link: 'https://4keventrentals.devkintech.net',
+    mobile_app_link: null
+  },
+  {
+    image: 'assets/images/projects/4k-memorial-homes.png',
+    name: '4K Memorial Homes',
+    description: 'Internal System for 4K Memorial Homes, a funeral service provider in Bato Camarines Sur & Iriga City, Philippines.',
+    stacks: ['Laravel', 'mysql', 'linux', 'vuejs', 'nginx'],
+    link: 'https://4kmemorialhomes.devkintech.net',
+    mobile_app_link: null
+  },
+  {
     image: 'assets/images/projects/jmampuag-barber.png',
     name: 'JMampuag Barber',
     description: 'Precision barbering, thoughtful service, and a space designed for your best look.',
