@@ -24,6 +24,17 @@
                 <p class="text-lg font-bold">kinnberedico.work@gmail.com</p>
               </div>
             </div>
+            <div class="flex items-center gap-4 group">
+              <div
+                class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all"
+              >
+                <span class="material-symbols-outlined">call</span>
+              </div>
+              <div>
+                <p class="text-xs text-slate-500 font-bold uppercase tracking-widest">Call me</p>
+                <p class="text-lg font-bold">(0906) 345 4364</p>
+              </div>
+            </div>
             <div class="flex items-center gap-4 group hidden">
               <div
                 class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all"

@@ -80,6 +80,14 @@ const projects = ref([
     mobile_app_link: null
   },
   {
+    image: 'assets/images/projects/ragoa.png',
+    name: 'RAGOA Business Solutions',
+    description: 'Delivering quality business technology solutions, equipping clients with reliable and premium quality services to meet their demands.',
+    stacks: ['Laravel', 'mysql', 'linux'],
+    link: 'https://ragoa.ae',
+    mobile_app_link: null
+  },
+  {
     image: 'assets/images/projects/Capex.png',
     name: 'CaPEx',
     description: 'TNVS - Web & Mobile App',

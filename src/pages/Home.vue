@@ -40,11 +40,14 @@
           stacks.
         </p> -->
         <div class="flex flex-wrap gap-4">
-          <button
+          <a
+            :href="cvLink"
+            target="_blank"
+            rel="noopener noreferrer"
             class="bg-primary hover:shadow-[0_0_20px_rgba(13,89,242,0.4)] text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 transition-all"
           >
             Download CV <span class="material-symbols-outlined">download</span>
-          </button>
+          </a>
           <!-- <button
             class="bg-charcoal hover:bg-slate-700 border border-slate-700 text-white px-8 py-4 rounded-xl font-bold transition-all"
           >
@@ -114,4 +117,5 @@ import Contact from '@/components/Contact.vue'
 import FooterSection from '@/components/FooterSection.vue'
 
 const yearsExperience = new Date().getFullYear() - 2019
+const cvLink = 'https://drive.google.com/uc?export=download&id=1ZcvLQYH15-lakZ3hPv0pGJVj67G4JEov'
 </script>
