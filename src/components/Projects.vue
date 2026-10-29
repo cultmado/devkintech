@@ -64,7 +64,7 @@ const projects = ref([
     mobile_app_link: null
   },
   {
-    image: 'assets/images/projects/4k-memorial-homes.png',
+    image: 'assets/images/projects/4k-memorial-homes1.png',
     name: '4K Memorial Homes',
     description: 'Internal System for 4K Memorial Homes, a funeral service provider in Bato Camarines Sur & Iriga City, Philippines.',
     stacks: ['Laravel', 'mysql', 'linux', 'vuejs', 'nginx'],

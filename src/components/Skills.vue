@@ -1,12 +1,12 @@
 <template>
-  <section class="py-24 relative overflow-hidden" id="skills">
+  <section class="py-16 md:py-24 relative overflow-hidden" id="skills">
     <div
       class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/5 blur-[120px] rounded-full"
     ></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 gap-6">
         <div>
-          <h2 class="text-4xl font-bold mb-2">Technical Mastery</h2>
+          <h2 class="text-3xl md:text-4xl font-bold mb-2">Technical Mastery</h2>
           <p class="text-slate-400">My specialized toolset for building digital products.</p>
         </div>
         <!-- <div class="flex gap-2">

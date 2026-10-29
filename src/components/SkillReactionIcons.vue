@@ -13,9 +13,10 @@
     ></canvas>
 
     <div
-      class="pointer-events-none absolute left-4 top-4 text-xs text-slate-300/90 bg-slate-950/40 border border-slate-800 rounded-full px-3 py-1"
+      class="pointer-events-none absolute left-3 top-3 sm:left-4 sm:top-4 text-xs text-slate-300/90 bg-slate-950/40 border border-slate-800 rounded-full px-3 py-1"
     >
-      Drag nodes • billiards collisions • click to energize
+      <span class="sm:hidden">Drag nodes • tap to energize</span>
+      <span class="hidden sm:inline">Drag nodes • billiards collisions • click to energize</span>
     </div>
   </div>
 </template>
@@ -115,6 +116,11 @@ let imageMap = new Map()
 
 let lastT = 0
 let dpr = 1
+// shrinks nodes, padding and bond distance on small canvases (mobile)
+let scale = 1
+
+// extra hit radius for fingers, since scaled-down nodes are small touch targets
+const TOUCH_SLOP = 10
 
 // Drag state
 const drag = {
@@ -153,7 +159,20 @@ function resizeCanvas() {
   ctx = canvas.getContext('2d')
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
 
+  scale = computeScale(w, h)
+  for (const n of nodes) {
+    n.r = n.baseR * scale
+    n.mass = n.r * n.r
+  }
+
   if (nodes.length) clampNodesIntoBounds()
+}
+
+// keep total node area at ~30% of the canvas so small screens don't get packed solid
+function computeScale(w, h) {
+  if (!w || !h || !props.skills.length) return 1
+  const baseArea = props.skills.length * Math.PI * props.nodeRadius ** 2
+  return Math.min(1, Math.sqrt((w * h * 0.3) / baseArea))
 }
 
 function clampNodesIntoBounds() {
@@ -188,7 +207,8 @@ function initNodes() {
   const { w, h } = getCssSize()
 
   nodes = props.skills.map((s, i) => {
-    const r = Math.max(18, props.nodeRadius + rand(-props.radiusJitter, props.radiusJitter))
+    const baseR = Math.max(18, props.nodeRadius + rand(-props.radiusJitter, props.radiusJitter))
+    const r = baseR * scale
 
     const x = rand(r, Math.max(r + 1, w - r))
     const y = rand(r, Math.max(r + 1, h - r))
@@ -206,6 +226,7 @@ function initNodes() {
       y,
       vx,
       vy,
+      baseR,
       r,
       mass: r * r, // proportional to area (good for billiards feel)
       energy: 0,
@@ -228,12 +249,12 @@ function getPointerPos(e) {
   return { x: e.clientX - rect.left, y: e.clientY - rect.top }
 }
 
-function hitTest(x, y) {
+function hitTest(x, y, slop = 0) {
   let hit = null
   let best = Infinity
   for (const n of nodes) {
     const d = Math.hypot(x - n.x, y - n.y)
-    if (d <= n.r && d < best) {
+    if (d <= n.r + slop && d < best) {
       best = d
       hit = n
     }
@@ -246,7 +267,7 @@ function onPointerDown(e) {
   canvasRef.value.setPointerCapture?.(e.pointerId)
 
   const { x, y } = getPointerPos(e)
-  const n = hitTest(x, y)
+  const n = hitTest(x, y, e.pointerType === 'touch' ? TOUCH_SLOP : 0)
 
   if (!n) return
 
@@ -300,6 +321,17 @@ function onPointerMove(e) {
   // while dragging, push others out billiards-style
   // (soft resolve overlaps against dragged node)
   resolveDraggedCollisions(n)
+}
+
+/**
+ * On touch screens, block page scroll only when the finger lands on a node,
+ * so dragging works but swiping empty canvas still scrolls the page.
+ */
+function onTouchStart(e) {
+  const t = e.touches[0]
+  if (!t) return
+  const rect = canvasRef.value.getBoundingClientRect()
+  if (hitTest(t.clientX - rect.left, t.clientY - rect.top, TOUCH_SLOP)) e.preventDefault()
 }
 
 function onPointerUp(e) {
@@ -569,7 +601,7 @@ function separateOverlaps(passes = 3) {
 }
 
 function drawLinksAndPropagate() {
-  const bd = props.bondDistance
+  const bd = props.bondDistance * scale
 
   for (let i = 0; i < nodes.length; i++) {
     for (let j = i + 1; j < nodes.length; j++) {
@@ -642,7 +674,7 @@ function drawNode(n) {
 
   if (!img) return
 
-  const pad = props.iconPadding
+  const pad = props.iconPadding * scale
   const size = n.r * 2 - pad * 2
 
   const showColor = props.stickyReveal
@@ -693,6 +725,8 @@ onMounted(async () => {
   ro = new ResizeObserver(() => resizeCanvas())
   ro.observe(canvasRef.value)
 
+  canvasRef.value.addEventListener('touchstart', onTouchStart, { passive: false })
+
   rafId = requestAnimationFrame(frame)
 })
 
@@ -700,6 +734,7 @@ onBeforeUnmount(() => {
   if (rafId) cancelAnimationFrame(rafId)
   if (ro && canvasRef.value) ro.unobserve(canvasRef.value)
   ro = null
+  canvasRef.value?.removeEventListener('touchstart', onTouchStart)
 })
 
 watch(

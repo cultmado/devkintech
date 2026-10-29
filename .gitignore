@@ -40,3 +40,8 @@ __screenshots__/
 
 test-results/
 playwright-report/
+
+# Environment
+.env
+.env.*
+!.env.example
